@@ -1,0 +1,16 @@
+---
+title: 陶笛日记
+layout: default
+keywords: [陶笛日记, 陶笛, 简谱]
+---
+
+
+{% for n in site.notation %}
+{% if n.publish %}
+<a class="uk-button" style="margin: 0px 0px 10px 10px;" href="{{ n.url }}"> 
+    <div style="text-align:left;font-size:18px">{{ n.title-mini }}</div> 
+    <hr>
+    <p style="text-align:left;font-size:11px;margin:0px;">{{ n.description-mini}}</p>
+</a>
+{% endif %}
+{% endfor %}

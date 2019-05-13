@@ -1,0 +1,38 @@
+
+<style>
+.x-zan {
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+}
+.x-zan> * {
+    padding: 0 12px 0 12px;
+}
+</style>
+
+
+<ul data-uk-sticky="{top:10}" class="uk-list">
+    <li id="x-zan-weibo" class="uk-panel uk-panel-box x-zan">
+        <div>
+            <wb:like id="weibo-like" appkey="1A4LFW"></wb:like>
+        </div>
+    </li>
+
+    {% if page.layout == 'blogs-right' %}
+    <li id="x-zan-toc" class="uk-panel uk-panel-box x-zan">
+        <ul id="x-toc" class="uk-nav uk-nav-side" style="margin:0;padding:0;"
+            data-uk-scrollspy-nav="{closest:'li'}"></ul>
+    </li>
+    {% endif %}
+    
+    {% if page.connotation %}
+    <li id="x-zan-wechat" class="uk-panel uk-panel-box x-zan" style="display:none;"></li>
+    <script>
+        $('#x-zan-wechat').html(
+            '<p class="uk-text-top" style="display:inline-block;">微信扫一扫</p>' +
+            '<img width="160px" src="{{ site.url-cdn0 }}/images/ocarina-diary-wechat-donate.jpg" alt="微信赞赏码">' +
+            '<p style="font-size:12px;">￥0.01 或 ￥100，都是陶笛日记最大的动力</p>'
+        )
+        // $('#x-zan-wechat').show()
+    </script>
+    {% endif %}
+</ul>

@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<!-- 使用这个 layout 必须用下面这个模版
+<div id="x-left-content"></div>
+<div id="x-right-content"></div>
+-->
+
+<style>
+    #x-left-box {
+        min-width: 280px;
+    }
+    #x-left-content {
+        display: none;
+    }
+    #x-right-box {
+        padding: 0 5px 0 5px;
+    }
+    #x-right-content {
+        display: none;
+        min-height: 400px;
+    }
+    .x-center-for-hide-left {
+        border-color: #eee;
+        border-image: none;
+        border-style: solid;
+        border-width: 0 0px 0 0;
+        
+        padding: 0 0 0 5px;
+        cursor: w-resize;
+        z-index: 9999999;
+    }
+    .x-center-when-hide-left {
+        cursor: e-resize;
+        background-color: #eee;
+    }
+</style>
+
+<div class="uk-flex">
+    <div id="x-left-box" class="uk-visible-large uk-width-large-3-10">
+        <div id="x-left-content-place"></div>
+        {% include zan.html %}
+    </div>
+
+    <div id="x-center-box" class="x-center-for-hide-left uk-visible-large"
+        v-bind:class="{'x-center-when-hide-left': !leftVisible}" 
+        v-on:click="toggleLeft()"></div>
+    <script src="{{ site.url-cdn0 }}/js/hotkeys.min-3.3.8.js"></script>
+    <script>
+        hotkeys('ctrl+b,command+b', function(event,handler) {
+            $('#x-center-box').click()
+        })
+        vm_x_center_box = new Vue({
+            el: "#x-center-box",
+            data: {
+                leftVisible: true,
+            },
+            methods: {
+                toggleLeft: function() {
+                    $('#x-left-box').toggle();
+                    this.leftVisible = !this.leftVisible;
+                },
+                hideLeft: function() {
+                    $('#x-left-box').hide();
+                    this.leftVisible = false;
+                },
+                showLeft: function() {
+                    $('#x-left-box').show();
+                    this.leftVisible = true;
+                },
+            }
+        })
+    </script>
+
+    <div id="x-right-box" class="uk-width-1-1">
+        {{ content }}
+        <script>
+            $('#x-left-content').prependTo('#x-left-content-place');
+            $('#x-left-content').show();
+            $('#x-right-content').show();
+        </script>
+
+        <div id="disqus_thread">
+            <hr><br>
+            您的网络环境无法访问 Disqus 的评论模块。<a id="shadowsocks-url" href="https://portal.shadowsocks.ch/aff.php?aff=18934" target="_blank" style="display:none;"> 尝试使用 ss，体验完整的互联网 </a>。
+            <script>
+                WithFParams.postForm('/unclassified/shadowsocks/url', {},
+                    function(result) {
+                        if (result.url) {
+                            $("#shadowsocks-url").attr("href", result.url)
+                            $("#shadowsocks-url").show()
+                        }
+                    }
+                )
+            </script>
+        </div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = "https://ocarina-diary.com{{ page.url }}";
+                this.page.identifier = "https://ocarina-diary.com{{ page.url }}";
+            };
+            $('#the-gfw').on('passible', function() {
+                var d = document, s = d.createElement('script');
+                s.src = '//tao-di-ri-ji.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            });
+        </script>
+    </div>
+</div>

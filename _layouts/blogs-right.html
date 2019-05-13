@@ -1,0 +1,63 @@
+---
+layout: default-right
+---
+
+<style>
+    .x-article-meta {
+        display: inline;
+    }
+    .x-article-title-divider {
+        margin-bottom: 25px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    @media (min-width: 768px) {
+        .x-article-video {
+            width: 100%;
+            height: 280px;
+        }
+    }
+    @media (min-width: 960px) {
+        .x-article-video {
+            width: 100%;
+            height: 315px;
+            max-width: 560px;
+        }
+    }
+    #markdown-toc {
+        display: none;
+    }
+    #x-zan-toc {
+        display: none;
+    }
+</style>
+
+<div id="x-left-content"></div>
+
+<div id="x-right-content">
+    <article itemscope itemtype="http://schema.org/Article" 
+        class="x-right-content uk-article">
+        <h2>
+            <span itemprop="name">{{ page.title }}</span>
+            <br class="uk-visible-small"/>
+            <p itemprop="datePublished" content="{{ page.url | slice: 7, 10 }}"
+                class="uk-article-meta x-article-meta">创建于 {{ page.url | slice: 7, 10 }}
+            </p>
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <meta itemprop="name" content="陶笛日记">
+            </span>
+        </h2>
+        <hr class="x-article-title-divider">
+        <div itemprop="articleBody">
+            {{ content }}
+        </div>
+    </article>
+</div>
+
+<script>
+    if ($("#markdown-toc").length > 0) {
+        $('#markdown-toc').children().appendTo('#x-toc');
+        $('#x-zan-toc').show();
+    }
+</script>

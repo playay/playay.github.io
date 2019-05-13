@@ -1,0 +1,103 @@
+---
+title: 陶笛日记
+layout: default
+keywords: [陶笛日记, 陶笛]
+---
+
+<style>
+.blog-timeline-year {
+    margin: 0;
+}
+@media (min-width: 768px) {
+    .blog-timeline-item-right {
+        margin-left: 35%;
+    }
+    .blog-timeline-item-left {
+        float: right;
+        margin-right: calc(65% - 73.16px);
+    }
+}
+</style>
+
+<div id="siteMap" class="uk-hidden">
+    {% for blog in site.blogs %}
+    {% if blog.publish %}
+    <a href="{{ blog.url}}">{{ blog.title }}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% raw %}
+<div id="blog-index" class="uk-grid">
+    <div id="blog-index-left" class="uk-width-medium-2-10 uk-hidden-small">
+        <button class="uk-button uk-width-1-1" v-on:click="reverse()" >反转顺序</button>
+        <ul id="year-tab" class="uk-tab uk-tab-left">
+            <li class="uk-active" data-uk-filter=""><a>全部</a></li>
+            <li v-for="item in year_set" :key="item" v-bind:data-uk-filter="item"><a>{{ item }}</a></li>
+        </ul>
+    </div>
+
+    <div id="blog-index-right" class="uk-width-medium-8-10 uk-grid-width-1-1" 
+        data-uk-grid="{controls: '#year-tab', gutter: 10, animation: false}">
+        
+        <ul class="uk-list uk-list-space blog-timeline-year" v-for="year in year_set" v-bind:data-uk-filter="year" >
+            <li v-for="blog in blogListInYear(year)" :key="blog.url">
+                <a v-if="blog.connotation" v-bind:href="blog.url" class="blog-timeline-item-right"> 
+                    <span class="uk-text-muted">{{ blog.date }}</span>
+                    <span><span class="uk-text-muted"> - </span>{{ blog.title }}</span>
+                </a>
+                <a v-else v-bind:href="blog.url" class="blog-timeline-item-left"> 
+                    <span class="uk-hidden-small uk-text-right">
+                            {{ blog.title }}<span class="uk-text-muted uk-hidden-small"> - </span></span>
+                    <span class="uk-text-muted">{{ blog.date }}</span>
+                    <span class="uk-visible-small"><span class="uk-text-muted"> - </span> {{ blog.title }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+{% endraw %}
+
+<script>
+var year_set = new Set()
+var blog_list = []
+
+{% for blog in site.blogs %}
+{% if blog.publish %}
+blog_list.push({
+    "title": "{{ blog.title }}",
+    "url": "{{ blog.url }}",
+    "date": "{{ blog.url | slice: 7, 10 }}",
+    "year": "{{ blog.url | slice: 7, 4 }}",
+    "connotation": "{{ blog.connotation }}",
+})
+year_set.add("{{ blog.url | slice: 7, 4 }}")
+{% endif %}
+{% endfor %}
+
+var vm_blog_index = new Vue({
+    el: "#blog-index",
+    data: {
+        blog_list: blog_list,
+        year_set: Array.from(year_set),
+    },
+    methods: {
+        reverse: function() {
+            this.blog_list = this.blog_list.reverse()
+            this.year_set = this.year_set.reverse()
+            setTimeout(() => {
+                $('#year-tab').children('.uk-active').first().click()
+                setTimeout(() => {$('#year-tab').children('.uk-active').first().click()}, 900);
+            }, 200);
+        },
+        blogListInYear: function(year) {
+            return this.blog_list.filter(
+                function (blog) {
+                    return blog.year == year
+                }
+            )
+        },
+    },
+})
+</script>

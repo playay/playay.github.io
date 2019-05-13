@@ -1,0 +1,28 @@
+<html xmlns:wb="https://open.weibo.com/wb">
+<head>
+{% include head.html %}
+{% include feling-api.html %}
+</head>
+
+<body>
+    {% include the-gfw.html %}
+    {% include go-top.html %}
+    <header>
+        {% include header.html %}
+    </header>
+    <hr>
+    
+    <div id="content" class="x-container">
+        {{ content }}
+    </div>
+
+    <footer>
+        <hr>
+        <div class="x-container">
+            {% include footer.html %}
+        </div>
+    </footer>
+    {% include baidu.html %}
+</body>
+
+</html>

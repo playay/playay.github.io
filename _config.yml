@@ -1,0 +1,31 @@
+title:  "陶笛日记"
+exclude:  ["README.md", "CNAME"]
+include:  [".well-known"]
+timezone:  "Asia/Shanghai"
+
+url: https://ocarina-diary.com
+
+
+# 回源 github，https://ocarina-diary.com
+url-cdn:  https://ocarina-diary.com 
+#url-cdn:  https://ocarina-diary-cdn.feling.io
+
+# 回源 阿里云oss
+url-cdn0:  https://ocarina-diary.com 
+#url-cdn0:  https://ocarina-diary-cdn0.feling.io
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+  blogs:
+    output: true
+    permalink: /:collection/:name:output_ext
+
+  series:
+    output: true
+    permalink: /:collection/:name:output_ext
+
+  notation:
+    output: true
+    permalink: /:collection/:name:output_ext

@@ -1,0 +1,64 @@
+<div class="uk-navbar-content" id="google-search" style="display:none">
+<script>
+$('#the-gfw').on('passible', function() {
+        var cx = '005096245001006865205:vwnyo0q4uji';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+
+        setTimeout(() => {
+            $("#gsc-i-id1").attr("placeholder", "搜索乐谱")
+            $("#google-search").show()
+        }, 3000); 
+    }
+)
+</script>
+<style>
+@media (max-width: 959px) {
+    #google-search {
+        padding: 0;
+    }
+    .gsc-input-box {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+#___gcse_0 {
+    display: inline-block;
+    height: 100%;
+    width: 170px;
+}
+.gsc-search-button {
+    display: none;
+}
+.gsc-control-cse {
+    background-color: #eee;
+    border: 0;
+    padding: 0;
+    height: 100%;
+}
+.gsc-control-wrapper-cse {
+    height: 100%;
+}
+.gsc-search-box {
+    height: 100%;
+}
+#gsc-i-id1 {
+    font-size: 13px;
+}
+#gsc-i-id1::placeholder {
+    font-size: 13px;
+}
+.gsib_b {
+    display: none;
+}
+.vglnk {
+    pointer-events: none;
+    color: #ccc;
+}
+</style>
+<gcse:search></gcse:search>
+</div>

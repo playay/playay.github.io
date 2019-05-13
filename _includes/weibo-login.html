@@ -1,0 +1,83 @@
+
+<a id="signInButton" onclick="onSignInButtonClick()" onselectstart="return false;"
+    class="uk-navbar-brand" style="display:none;margin-right:15px;">
+    <i id="signInSpinner" class="al-spinner" style="display:none"></i>
+    <i class="uk-icon-weibo" style="font-size:16px;"></i> 登录
+</a>
+<ul id="userAvatarAndName" class="uk-navbar-nav" style="display:none;">
+    <li class="uk-parent" data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+        <a class="uk-navbar-content" onselectstart="return false;">
+            <!-- <img id="userAvatar" style="width:30px;height:30px;border-radius:50%;margin-right:10px;"> -->
+            <span id="userName"></span>  <i class="uk-icon-caret-down"></i>
+        </a>
+        <div class="uk-dropdown uk-dropdown-small uk-dropdown-navbar">
+            <ul class="uk-nav uk-nav-navbar">
+                <li><a onClick="onSignOutButtonClick()">退出登录  <i id="signOutSpinner" class="al-spinner" style="display:none"></i></a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+<script>
+    function onSignInButtonClick() {
+        open('https://api.weibo.com/oauth2/authorize?client_id=981136580&response_type=code&redirect_uri=https%3A%2F%2Focarina-diary.com%2FsignIn.html%3Furl%3Dhttps%3A%2F%2Focarina-diary.com{{ page.url | cgi_escape }}', 
+            '使用微博登录', 'width=770,height=600')
+    }
+    $(window).on('storage', (e) => {
+        if (e.key === 'userName') {
+            $("#userAvatar").attr("src", localStorage.userAvatar)
+            $("#userName").html(localStorage.userName)
+            $("#userAvatarAndName").show()
+            $("#signInButton").hide()
+        }
+    })
+
+    function onSignOutButtonClick() {
+        $('#signOutSpinner').show()
+        WithFParams.postForm('/login/signOut', {}, function() { })
+        .always(function() {
+            localStorage.removeItem('accessToken')
+            localStorage.removeItem('accessTokenExpiredAt')
+            localStorage.removeItem('userAvatar')
+            localStorage.removeItem('userName')
+            $("#signInButton").show()
+            $("#userAvatarAndName").hide()
+            $("#signOutSpinner").hide()
+        })
+    }
+    function loadUserAvatarAndNameFormLocalStorage2ShowInNavBar () {
+        if (localStorage.accessToken) {
+            $("#userAvatar").attr("src", localStorage.userAvatar)
+            $("#userName").html(localStorage.userName)
+            $("#userAvatarAndName").show()
+            $("#signInButton").hide()
+        } else {
+            $("#userAvatarAndName").hide()
+            $("#signInButton").show()
+        }
+    }
+    if (localStorage.accessToken) {
+        WithFParams.postForm('/login/getLoginInfo',
+            {
+                accessToken: localStorage.accessToken
+            },
+            function(result) {
+                if (result.success && result.data) {
+                    localStorage.accessTokenExpiredAt = result.data.accessTokenExpiredAt
+                    localStorage.userAvatar = result.data.userAvatar
+                    localStorage.userName = result.data.userName
+                } else {
+                    localStorage.removeItem('accessToken')
+                    localStorage.removeItem('accessTokenExpiredAt')
+                    localStorage.removeItem('userAvatar')
+                    localStorage.removeItem('userName')
+                    $("#signInButton").show()
+                    $("#userAvatarAndName").hide()
+                }
+            }
+        ).always(function() {
+            loadUserAvatarAndNameFormLocalStorage2ShowInNavBar()
+        })
+    } else {
+        loadUserAvatarAndNameFormLocalStorage2ShowInNavBar()
+    }
+</script>
