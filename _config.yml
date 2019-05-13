@@ -1,5 +1,5 @@
 title:  "陶笛日记"
-exclude:  ["README.md", "CNAME"]
+exclude:  ["README.md"]
 include:  [".well-known"]
 timezone:  "Asia/Shanghai"
 
