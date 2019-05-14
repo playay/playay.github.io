@@ -29,3 +29,4 @@ collections:
   notation:
     output: true
     permalink: /:collection/:name:output_ext
+    
