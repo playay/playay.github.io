@@ -6,7 +6,9 @@ let gfw_tester = $.ajax({
         if (data.statusText == "timeout") {
             $('#the-gfw').trigger('unpassible')
         } else {
-            $('#the-gfw').trigger('passible')
+            setTimeout(() => {
+                $('#the-gfw').trigger('passible')
+            }, 3000);
         }
     },
     timeout: 2000

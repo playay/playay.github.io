@@ -52,9 +52,7 @@ layout: default-right
             },
             mounted: function () {
                 $('#the-gfw').on('passible', () => {
-                    setInterval(() => {
-                        this.accessible = true
-                    }, 3000);
+                    this.accessible = true
                 })
             },
         })
