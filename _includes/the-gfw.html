@@ -1,14 +1,16 @@
 <div id="the-gfw"></div>
 <script>
-let gfw_tester = $.ajax({
-    url: "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=xxx", 
-    complete: function (data) {
-        if (data.statusText == "timeout") {
-            $('#the-gfw').trigger('unpassible')
-        } else {
-            $('#the-gfw').trigger('passible')
-        }
-    },
-    timeout: 1000
-});
+$(window).on('load', () => {
+    $.ajax({
+        url: "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=xxx", 
+        complete: function (data) {
+            if (data.statusText == "timeout") {
+                $('#the-gfw').trigger('unpassible')
+            } else {
+                $('#the-gfw').trigger('passible')
+            }
+        },
+        timeout: 2000
+    });
+})
 </script>
