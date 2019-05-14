@@ -1,3 +1,12 @@
+<div class="uk-navbar-content" id="google-search-unpassible" style="display:none">
+    您的网络环境无法使用谷歌站内搜索
+    <script>
+        $('#the-gfw').on('unpassible', function() {
+                $("#google-search-unpassible").show()
+            }
+        )
+    </script>
+</div>
 <div class="uk-navbar-content" id="google-search" style="display:none">
 <script>
 $('#the-gfw').on('passible', function() {

@@ -3,7 +3,9 @@
 let gfw_tester = $.ajax({
     url: "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=xxx", 
     complete: function (data) {
-        if (data.statusText !== "timeout") {
+        if (data.statusText == "timeout") {
+            $('#the-gfw').trigger('unpassible')
+        } else {
             $('#the-gfw').trigger('passible')
         }
     },
