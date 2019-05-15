@@ -5,7 +5,7 @@ keywords: [陶笛日记, 陶笛, 简谱]
 ---
 
 
-{% for n in site.notation | reversed %}
+{% for n in site.notation reversed %}
 {% if n.publish %}
 <a class="uk-button" style="margin: 0px 0px 10px 10px;" href="{{ n.url }}"> 
     <div style="text-align:left;font-size:18px">{{ n.title-mini }}</div> 
