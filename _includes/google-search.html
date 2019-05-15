@@ -7,7 +7,8 @@
         )
     </script>
 </div>
-<div class="uk-navbar-content" id="google-search" style="display:none">
+
+<div class="uk-navbar-content" id="google-search">
 <script>
 $('#the-gfw').on('passible', function() {
         var cx = '005096245001006865205:vwnyo0q4uji';
@@ -17,10 +18,9 @@ $('#the-gfw').on('passible', function() {
         gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(gcse, s);
-        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");$("#google-search").show()}, 100); 
-        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");$("#google-search").show()}, 500); 
-        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");$("#google-search").show()}, 1000); 
-        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");$("#google-search").show()}, 3000); 
+        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱")}, 500); 
+        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱")}, 1000); 
+        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱")}, 3000); 
     }
 )
 </script>
