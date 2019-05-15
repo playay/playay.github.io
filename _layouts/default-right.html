@@ -46,7 +46,7 @@ layout: default
     <div id="x-center-box" class="x-center-for-hide-left uk-visible-large"
         v-bind:class="{'x-center-when-hide-left': !leftVisible}" 
         v-on:click="toggleLeft()"></div>
-    <script src="{{ site.url-cdn0 }}/js/hotkeys.min-3.3.8.js"></script>
+    <script src="/js/hotkeys.min-3.3.8.js"></script>
     <script>
         hotkeys('ctrl+b,command+b', function(event,handler) {
             $('#x-center-box').click()
@@ -97,8 +97,8 @@ layout: default
         </div>
         <script>
             var disqus_config = function () {
-                this.page.url = "https://ocarina-diary.com{{ page.url }}";
-                this.page.identifier = "https://ocarina-diary.com{{ page.url }}";
+                this.page.url = "https://www.ocarina-diary.com{{ page.url }}";
+                this.page.identifier = "https://www.ocarina-diary.com{{ page.url }}";
             };
             $('#the-gfw').on('passible', function() {
                 var d = document, s = d.createElement('script');

@@ -1,26 +1,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="hostname" content="ocarina-diary.com">
+<meta name="hostname" content="www.ocarina-diary.com">
 <meta name="description" content="{% if page.description %}{{ page.description }}{% endif %} -- 记录并分享陶笛学习的过程、心得体会。乐谱、伴奏、演奏视频 尽在“陶笛日记”。">
 <meta name="keywords" content="{{ page.keywords | join: ',' }}">
 <title>
     {{ page.title }}
 </title>
 
-<link rel="stylesheet" href="{{ site.url-cdn0 }}/css/uikit.min.css" media="all">
+<link rel="stylesheet" href="/css/uikit.min.css" media="all">
 {% include x-css.html %}
 
-<link rel="icon" type="image/png" href="{{ site.url-cdn0 }}/images/favicon100.png">
+<link rel="icon" type="image/png" href="/images/favicon100.png">
 
-<script src="{{ site.url-cdn0 }}/js/jquery-3.3.1.min.js"></script>
-<script src="{{ site.url-cdn0 }}/js/uikit.min.js"></script>
-<script src="{{ site.url-cdn0 }}/js/vue.min.js"></script>
-<!-- <script src="{{ site.url-cdn0 }}/js/vue.js"></script> -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/uikit.min.js"></script>
+<script src="/js/vue.min.js"></script>
+<!-- <script src="/js/vue.js"></script> -->
 
-<script src="{{ site.url-cdn0 }}/js/components/grid.min.js"></script>
+<script src="/js/components/grid.min.js"></script>
 
-<!-- <link rel="stylesheet" href="{{ site.url-cdn0 }}/css/components/tooltip.min.css" media="all"> -->
-<!-- <script src="{{ site.url-cdn0 }}/js/components/tooltip.min.js"></script> -->
+<!-- <link rel="stylesheet" href="/css/components/tooltip.min.css" media="all"> -->
+<!-- <script src="/js/components/tooltip.min.js"></script> -->
 
 {% if page.layout contains "-right" %}<!-- 放到 uikit.js 之后 -->
 {% include zan-head.html %}
@@ -36,7 +36,7 @@
     "brand" : {
         "@type" : "Brand",
         "name" : "陶笛日记",
-        "logo" : "https://ocarina-diary.com/images/favicon100.png"
+        "logo" : "https://www.ocarina-diary.com/images/favicon100.png"
     }
 }
 </script>

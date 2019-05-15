@@ -1,7 +1,7 @@
 V: 1.0.0
 B: 如果有你在
 B: C调陶笛 + F指法
-Z: ocarina-diary.com
+Z: www.ocarina-diary.com
 Z: 陶笛日记 制谱
 D: F
 P: 4/4

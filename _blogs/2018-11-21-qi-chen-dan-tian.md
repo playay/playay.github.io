@@ -27,7 +27,7 @@ publish: true
 
 人体的胸腔结构。可以示意成下面这张图：    
 
-<img width="300" src="{{ site.url-cdn }}/images/blogs/2018-11-21-qi-chen-dan-tian-01-2.svg" alt="胸腔结构示意图"/>
+<img width="300" src="/images/blogs/2018-11-21-qi-chen-dan-tian-01-2.svg" alt="胸腔结构示意图"/>
 
 横膈膜在中间，上面是心、肺，下面是肝、胃、肾、肠等其他器官。吸气的时候，**横膈膜向下**，挤压下部的器官，同时扩大了肺部所在的胸腔的空间。    
 

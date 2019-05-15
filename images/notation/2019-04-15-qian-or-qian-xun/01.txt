@@ -1,6 +1,6 @@
 V: 1.0.0
 B: いつも何度でも
-Z: ocarina-diary.com
+Z: www.ocarina-diary.com
 Z: 陶笛日记 制谱
 D: F
 P: 3/4

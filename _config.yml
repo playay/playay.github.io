@@ -3,16 +3,7 @@ exclude:  ["README.md"]
 include:  [".well-known"]
 timezone:  "Asia/Shanghai"
 
-url: https://ocarina-diary.com
-
-
-# 回源 github，https://ocarina-diary.com
-url-cdn:  https://ocarina-diary.com 
-#url-cdn:  https://ocarina-diary-cdn.feling.io
-
-# 回源 阿里云oss
-url-cdn0:  https://ocarina-diary.com 
-#url-cdn0:  https://ocarina-diary-cdn0.feling.io
+url: https://www.ocarina-diary.com
 
 plugins:
   - jekyll-sitemap

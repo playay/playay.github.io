@@ -1,2 +1,2 @@
 # ocarina-diary
-[ocarina-diary.com](https://ocarina-diary.com)
+[www.ocarina-diary.com](https://www.ocarina-diary.com)

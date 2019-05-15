@@ -19,18 +19,18 @@ publish: true
         音高之后，开始试音的时长。再然后试吹几遍，加上连音线。于是，就有了这两条朋友圈：
     </span>
     <a class="uk-thumbnail uk-thumbnail-mini" data-uk-modal href="#img-01">
-        <img src="{{ site.url-cdn }}/images/{{ page.url | remove: '.html' }}-01-1.png"/>
+        <img src="/images/{{ page.url | remove: '.html' }}-01-1.png"/>
     </a>
 </p>
 <div id="img-01" class="uk-modal">
     <div class="uk-modal-dialog">
-        <img src="{{ site.url-cdn }}/images/{{ page.url | remove: '.html' }}-01-1.png"/>
+        <img src="/images/{{ page.url | remove: '.html' }}-01-1.png"/>
     </div>
 </div>
 
 ---
 
-![]({{ site.url-cdn }}/images/{{ page.url | remove: '.html' }}-02-1.svg)
+![](/images/{{ page.url | remove: '.html' }}-02-1.svg)
 
 
 虽然只有一句，而且没有用 MIDI 播放的软件测试过，扒出的谱子也可能还哪里有错。但是至少发现了我的音感是有提高的。将来的某一天，这里的曲谱，是有可能自己亲耳、亲手扒的。而不是像现在这样到处在网上收集整理。    

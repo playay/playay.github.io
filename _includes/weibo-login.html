@@ -19,7 +19,7 @@
 </ul>
 <script>
     function onSignInButtonClick() {
-        open('https://api.weibo.com/oauth2/authorize?client_id=981136580&response_type=code&redirect_uri=https%3A%2F%2Focarina-diary.com%2FsignIn.html%3Furl%3Dhttps%3A%2F%2Focarina-diary.com{{ page.url | cgi_escape }}', 
+        open('https://api.weibo.com/oauth2/authorize?client_id=981136580&response_type=code&redirect_uri=https%3A%2F%2Fwww.ocarina-diary.com%2FsignIn.html%3Furl%3Dhttps%3A%2F%2Fwww.ocarina-diary.com{{ page.url | cgi_escape }}', 
             '使用微博登录', 'width=770,height=600')
     }
     $(window).on('storage', (e) => {
