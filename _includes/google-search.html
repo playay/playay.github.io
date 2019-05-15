@@ -17,9 +17,10 @@ $('#the-gfw').on('passible', function() {
         gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(gcse, s);
-        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");$("#google-search").show()}, 500); 
-        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");$("#google-search").show()}, 1000); 
-        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");$("#google-search").show()}, 3000); 
+        $("#google-search").show()
+        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");}, 500); 
+        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");}, 1000); 
+        setTimeout(() => {$("#gsc-i-id1").attr("placeholder", "搜索乐谱");}, 3000); 
     }
 )
 </script>
