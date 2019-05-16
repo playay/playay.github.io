@@ -14,7 +14,7 @@ collections:
     permalink: /:collection/:name:output_ext
 
   series:
-    output: false
+    output: true
     permalink: /:collection/:name:output_ext
 
   notation:
