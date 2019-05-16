@@ -7,11 +7,9 @@ keywords: [陶笛日记, 陶笛, 指法表, 陶笛入门]
 。。
 
 {% for s in site.series %}
-{% if s.publish %}
 <a class="uk-button" style="margin: 0px 0px 10px 10px;" href="{{ s.url }}"> 
     <div style="text-align:left;font-size:18px">{{ s.title-mini }}</div> 
     <hr>
     <p style="text-align:left;font-size:11px;margin:0px;">{{ s.description-mini}}</p>
 </a>
-{% endif %}
 {% endfor %}
