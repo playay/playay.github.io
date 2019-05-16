@@ -1,0 +1,61 @@
+<nav class="uk-navbar">
+
+    <a class="uk-navbar-brand uk-hidden-large" data-uk-offcanvas="{target:'#offcanvas-nav',mode:'push'}">
+        <i class="uk-icon-bars"></i>
+    </a>
+    <div id="offcanvas-nav" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-offcanvas" style="padding-top:10px" data-uk-nav>
+                <li {% if page.url contains "/daily-practice/" %}
+                    class="uk-active"
+                    {% endif %}><a href="/daily-practice/"> 每日一练 </a></li>
+        
+                <li {% if page.url contains "/blogs/" %}
+                    class="uk-active"
+                    {% endif %}><a href="/blogs/"> 杂记 </a></li>
+        
+                <li {% if page.url contains "/series/" %}
+                    class="uk-active"
+                    {% endif %} ><a href="/series/"> 专栏 </a></li>
+        
+                <li {% if page.url contains "/notation/" or page.url == "/" %}
+                    class="uk-active"
+                    {% endif %} ><a href="/notation/"> 乐谱 </a>
+                </li>
+                <!-- <li class="uk-nav-divider"></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <a href="/" class="uk-navbar-brand uk-visible-large" style="font-size:0;">
+        <img width="28px;" height="28px;" style="transform:rotate(9deg);" 
+            src="//cdn.feling.io/images/favicon100.png">
+    </a>
+    <ul class="uk-navbar-nav uk-visible-large">
+        <li {% if page.url contains "/daily-practice/" %}
+            class="uk-active"
+            {% endif %}><a href="/daily-practice/"> 每日一练 </a></li>
+
+        <li {% if page.url contains "/blogs/" %}
+            class="uk-active"
+            {% endif %}><a href="/blogs/"> 杂记 </a></li>
+
+        <li {% if page.url contains "/series/" %}
+            class="uk-active"
+            {% endif %} ><a href="/series/"> 专栏 </a></li>
+
+        <li {% if page.url contains "/notation/" or page.url == "/" %}
+            class="uk-active"
+            {% endif %} ><a href="/notation/"> 乐谱 </a>
+        </li>
+    </ul>
+
+    {% include google-search.html %}
+
+    <div class="uk-navbar-flip">
+        {% include alipay-red-bao.html %}
+        <ul class="uk-navbar-nav">
+            <li>{% include weibo-login.html %}</li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,366 @@
+---
+layout: default-right
+---
+
+<div id="x-left-content">
+    <ul id="left-content" class="uk-list">
+        <div id="tip-hide-x-left-box" class="uk-panel uk-panel-box" 
+            style="display:none;margin-bottom:10px;">
+        </div>
+        <script>
+            $('#tip-hide-x-left-box').html(
+                '<h5>提示：左侧栏目，可以折叠哦</h5>' +
+                '<p style="font-size:12px;">' +
+                '   1. 使用快捷键：`ctrl + b` 或 `command + b`。<br/>' +
+                '   2. 光标放到中间分隔处，可以看到光标有变化，点击就行了。<br/>' +
+                '   3. 点击乐谱展示栏右上方的 纯净模式。<br/><br/>' +
+                '3种方式，任选其一。' +
+                '<button class="uk-button uk-button-small" style="float:right;"' +
+                '   onclick="localStorage.tipHideXLeftBox=\'confirm\';$(\'#tip-hide-x-left-box\').hide(400);">' +
+                '   我知道啦</button>' +
+                '</p>'
+            )
+            if (localStorage.tipHideXLeftBox != "confirm") {
+                $('#tip-hide-x-left-box').show()
+            }
+        </script>
+        {% for item in page.data.left %}
+        <li class="uk-button uk-width-1-1 uk-text-left" onclick="switchNext(this)">
+            {{ item.title }} 
+            <span class="uk-text-muted uk-align-right" style="font-size:12px;">
+            {% if item.switchOff %}展开{% else %}收起{% endif %}</span>
+        </li>
+        <li {% if item.switchOff %}style="display:none;"{% endif %}>
+            {{ item.content }}
+        </li>
+        <li class="uk-nav-divider"></li>
+        {% endfor %}
+    </ul>
+    <script>
+        function switchNext(element) {
+            var ele = $(element).next()
+            if (ele.is(':visible')) {
+                ele.hide()
+                $(element).children('span').first().text('展开')
+            } else {
+                ele.show()
+                $(element).children('span').first().text('收起')
+            }
+        }
+        new Vue({
+            el: "#left-content",
+            data: {
+                accessible: false,
+            },
+            mounted: function () {
+                $('#the-gfw').on('passible', () => {
+                    this.accessible = true
+                })
+            },
+        })
+    </script>
+</div>
+
+
+<script>
+    function fixResize() {
+        loadAllCanvas()
+        $('#right-tab').children('.uk-active').first().click()
+    }
+    function saveCanvas(ele) {
+        if (ele) {
+            localStorage.setItem(ele.id, ele.toDataURL())
+            return
+        }
+        elementList = document.getElementsByTagName('canvas')
+        for (let index = 0; index < elementList.length; index++) {
+            const element = elementList[index]
+            localStorage.setItem(element.id, element.toDataURL())
+        }
+    }
+    function loadAllCanvas() {
+        let elementList = document.getElementsByTagName('canvas')
+    
+        for (let index = 0; index < elementList.length; index++) {
+            let element = elementList[index]
+            element.width = element.nextElementSibling.width
+            element.height = element.nextElementSibling.height
+            let ctx = element.getContext('2d')
+            if (localStorage.getItem(element.id)) {
+                let img = new Image();
+                img.onload = function() {
+                    ctx.drawImage(img, 0, 0, element.width, element.height);
+                }
+                img.src = localStorage.getItem(element.id);
+            }
+        }
+        $('#canvas-controller').show()
+    }
+    function onTouchStart(ele, event) {
+        $('#canvas-controller .uk-open').children().first().click()
+
+        let ctx = ele.getContext('2d')
+
+        if (!vm_canvas_controller.isEraser) {
+            ctx.lineCap = vm_canvas_controller.lineCap
+            ctx.lineJoin = vm_canvas_controller.lineJoin
+            ctx.lineWidth = vm_canvas_controller.lineWidth
+            ctx.strokeStyle = vm_canvas_controller.color;
+            ctx.beginPath();
+        }
+    
+        ele.ontouchmove = function(event){
+            if (event.touches.length > 1) {
+                ele.ontouchend
+                return true
+            }
+            let x = event.layerX
+            let y = event.layerY
+            if (!x || !y) {
+                let eleBox = ele.getBoundingClientRect()
+                x = event.touches[0].clientX - eleBox.left
+                y = event.touches[0].clientY - eleBox.top
+            }
+            if (vm_canvas_controller.isEraser) {
+                ctx.clearRect(x - vm_canvas_controller.eraserSizeHalf, 
+                            y - vm_canvas_controller.eraserSizeHalf, 
+                            vm_canvas_controller.eraserSize,
+                            vm_canvas_controller.eraserSize)
+            } else {
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            }
+            return false
+        }
+        ele.ontouchend = function(event){
+            if (!vm_canvas_controller.isEraser) {
+                ctx.closePath();
+            }
+            saveCanvas(ele)
+            ele.ontouchmove = null;
+            ele.ontouchend = null;
+            return false
+        }
+        return false
+    }
+    function onMouseDown(ele, event) {
+        $('#canvas-controller .uk-open').children().first().click()
+
+        let ctx = ele.getContext('2d')
+
+        if (!vm_canvas_controller.isEraser) {
+            ctx.lineCap = vm_canvas_controller.lineCap
+            ctx.lineJoin = vm_canvas_controller.lineJoin
+            ctx.lineWidth = vm_canvas_controller.lineWidth
+            ctx.strokeStyle = vm_canvas_controller.color;
+            ctx.beginPath();
+        }
+
+        ele.onmousemove = function(event){
+            if (vm_canvas_controller.isEraser) {
+                ctx.clearRect(event.layerX - vm_canvas_controller.eraserSizeHalf, 
+                            event.layerY - vm_canvas_controller.eraserSizeHalf, 
+                            vm_canvas_controller.eraserSize,
+                            vm_canvas_controller.eraserSize)
+            } else {
+                ctx.lineTo(event.layerX, event.layerY);
+                ctx.stroke();
+            }
+        }
+        ele.onmouseup = function(event){
+            if (!vm_canvas_controller.isEraser) {
+                ctx.closePath();
+            }
+            saveCanvas(ele)
+            ele.onmousemove = null;
+            ele.onmouseup = null;
+        }
+    }
+</script>
+<div id="x-right-content">
+    <div id="right-content">
+        <div>
+            <div id="right-tab" data-uk-button-radio style="display:inline-block;">
+                {% for item in page.data.right %}
+                <button class="uk-button"
+                    v-on:click="imagesSize={{ item.images.size }};Vue.nextTick(fixResize);"
+                    data-uk-filter="{{ item.tabName }}" >{{ item.tabName }}</button>
+                {% endfor %}
+            </div>
+            
+            <div style="float:right;">
+                <div id="canvas-controller-place" style="display:inline-block;"></div>
+                <button v-show="isInZenMode" @click="leftZenMode();Vue.nextTick(fixResize);" 
+                        style="margin-left:15px;"
+                        class="uk-button uk-button-success uk-visible-large">纯净模式</button>
+                <button v-show="!isInZenMode" @click="toZenMode();Vue.nextTick(fixResize);"
+                        style="margin-left:15px;"
+                        class="uk-button uk-visible-large">纯净模式</button>
+                <div v-if="imagesSize > 1" data-uk-button-radio class="uk-visible-large"
+                    style="margin-left:15px;display:inline-block;">
+                    <button class="uk-button" v-bind:class="{'uk-active':viewMode == 1}"
+                        v-on:click="viewMode = 1;Vue.nextTick(fixResize);">单列</button>
+                    <button class="uk-button" v-bind:class="{'uk-active':viewMode == 2}"
+                        v-on:click="viewMode = 2;Vue.nextTick(fixResize);">双列</button>
+                </div>
+            </div>
+        </div>
+        
+        <ul id="right-tab-content" class="uk-list" style="margin-top:2px;">
+            {% for item in page.data.right %}
+            <li data-uk-filter="{{ item.tabName }}" style="display:none;">
+                <div class="uk-grid uk-grid-collapse uk-grid-width-small-1-1"
+                    v-bind:class="{'uk-grid-width-large-1-2': imagesSize > 1 && viewMode == 2}">
+                    {% for image in item.images %}
+                    <div>
+                        <canvas id = "canvas_{{ page.id | remove_first: '/' | replace: '/', '-' }}_{{ image }}"
+                            onmousedown="onMouseDown(this, event)" ontouchstart="onTouchStart(this, event)"
+                            width="0" height="0"
+                            style="background:rgba(255,255,255,0);
+                                    z-index:99;
+                                    position:absolute;"
+                            >
+                        </canvas>
+                        <img src="/images{{ page.url | remove: '.html' }}/{{ image }}" 
+                            style="border: 1px solid #eee;
+                                background-color :#fff;
+                                min-width: 200px; 
+                                min-height: 100px;">
+                    </div>
+                    {% endfor %}
+                </div>
+                {% if item.text %}
+                <div v-if="!isInZenMode" style="margin-top:15px;">{{ item.text | markdownify }}</div>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script>
+        $(window).on('resize', fixResize)
+        $(window).on('load', fixResize)
+        $("#x-center-box").on('click', fixResize)
+
+        new Vue({
+            el: "#right-content",
+            data: {
+                isInZenMode: false,
+                viewMode: 2,
+                imagesSize: "{{ page.data.right[0].images.size }}",
+            },
+            methods: {
+                toZenMode: function() {
+                    $('#alipay-red-bao-ul').hide()
+                    $('#disqus_thread').hide()
+                    $('footer').hide()
+                    $('#google-search').hide()
+                    vm_x_center_box.hideLeft()
+                    this.isInZenMode = true
+                },
+                leftZenMode: function() {
+                    $('#alipay-red-bao-ul').show()
+                    $('#disqus_thread').show()
+                    $('footer').show()
+                    $('#google-search').show()
+                    vm_x_center_box.showLeft()
+                    this.isInZenMode = false
+                },
+            }
+        })
+    
+        // 放到 vue 之后
+        $('#right-tab').children().last().addClass('uk-active');
+        UIkit.grid(
+            $('#right-tab-content'), 
+            {
+                animation: false,
+                controls: '#right-tab',
+                filter: $('#right-tab').children().last().attr('data-uk-filter')
+            }
+        );
+    </script>
+
+
+{% raw %}
+<div id="canvas-controller" style="display:none;">
+    <div class="uk-button-group">
+        <button class="uk-button" v-bind:class="{'uk-button-success': !isEraser}"
+            @click="isEraser = false"><i class="uk-icon-pencil"></i>
+        </button>
+        <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+            <button class="uk-button" @click="isEraser = false" 
+                v-bind:style="{'color':color}"
+                v-bind:class="{'uk-button-success': !isEraser}">
+                <i class="uk-icon-caret-down"></i></button>
+            <div class="uk-dropdown uk-dropdown-small">
+                笔头颜色:   
+                <div data-uk-button-radio style="display:inline-block;">
+                    <button @click="color = '#ff2600'" style="color:#ff2600"
+                    class="uk-button uk-button-mini" 
+                        v-bind:class="{'uk-button-success':color =='#ff2600'}">
+                            <i class="uk-icon-eyedropper"></i></button>
+                    <button @click="color = '#0433ff'" style="color:#0433ff"
+                        class="uk-button uk-button-mini"
+                        v-bind:class="{'uk-button-success':color =='#0433ff'}">
+                        <i class="uk-icon-eyedropper"></i></button>
+                </div>
+                <input type="color" v-model="color">
+                <hr style="margin: 10px 0;">
+                笔头粗细: {{ lineWidth }} <br>
+                <input type="range" v-model="lineWidth" min="1" max="10" step="1">
+                <hr v-if="document.hasOwnProperty('ontouchstart')" style="margin: 10px 0;">
+                <span class="uk-text-small" v-if="document.hasOwnProperty('ontouchstart')">tip: 单指涂鸦、双指正常滚动页面。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-button-group">
+        <button class="uk-button" v-bind:class="{'uk-button-success': isEraser}"
+            @click="isEraser = true"><i class="uk-icon-eraser"></i>
+        </button>
+        <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+            <button class="uk-button" @click="isEraser = true" v-bind:class="{'uk-button-success': isEraser}">
+                <i class="uk-icon-caret-down"></i></button>
+            <div class="uk-dropdown uk-dropdown-small">
+                橡皮擦大小: {{ eraserSize }} <br>
+                <input type="range" v-model="eraserSize" min="5" max="40" step="1">
+            </div>
+        </div>
+    </div>
+</div>
+{% endraw %}
+<script>
+    var vm_canvas_controller = new Vue({
+        el: "#canvas-controller",
+        data: {
+            isEraser: false,
+            eraserSize: localStorage.canvas_eraserSize ? localStorage.canvas_eraserSize : 15,
+            color: localStorage.canvas_color ? localStorage.canvas_color : '#ff2600',
+            lineWidth: localStorage.canvas_lineWidth ? localStorage.canvas_lineWidth : 1,
+            lineCap: 'round',
+            lineJoin: 'round'
+        },
+        mounted: function () {
+            $('#canvas-controller').appendTo('#canvas-controller-place')
+        },
+        methods: {
+        },
+        watch: {
+            eraserSize: function (newValue, oldValue) {
+                localStorage.canvas_eraserSize = newValue
+            },
+            color: function (newValue, oldValue) {
+                localStorage.canvas_color = newValue
+            },
+            lineWidth: function (newValue, oldValue) {
+                localStorage.canvas_lineWidth = newValue
+            }
+        },
+        computed: {
+            eraserSizeHalf: function () {
+                return this.eraserSize / 2
+            }
+        }
+    })
+</script>
+</div>

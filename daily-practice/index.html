@@ -1,0 +1,66 @@
+---
+title: 陶笛日记
+layout: default
+keywords: [陶笛日记, 陶笛, 乐谱]
+description: 每日一练，巩固陶笛基础。C调、F调指法。基础练习曲谱。
+data: 
+    - title: "热身"
+      items: 
+        - "/images/fingering/c_7.svg"
+        - "/images/daily-practice/1542718855_1.svg"
+
+    - title: "右手练习"
+      items: 
+        - "/images/daily-practice/1542722472_1.svg"
+        - "/images/daily-practice/1542724056_1.svg"
+        - "/images/daily-practice/1542725194_1.svg"
+        - "/images/daily-practice/1542725657_1.svg"
+
+    - title: "左手练习"
+      items: 
+        - "/images/daily-practice/1542810184_1.svg"
+        
+    - title: "左右配合"
+      items: 
+        - "/images/fingering/f_6.svg"
+        - "/images/daily-practice/1544711684_1.svg"
+        - "/images/daily-practice/1543396455_1.svg"
+
+    - title: "大跳"
+      items: 
+        - "/images/daily-practice/1544712364_1.svg"
+
+    - title: "连吐"
+      items: 
+        - "/images/daily-practice/1544714789_1.svg"
+---
+
+<ul id="tab" class="uk-tab uk-hidden-small">
+    <li data-uk-filter=""><a>全部</a></li>
+    {% for tab in page.data %}
+    <li data-uk-filter="{{ tab.title }}"><a>{{ tab.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<div id="view" class="uk-grid-width-small-1-1 uk-grid-width-medium-1-2">
+    {% for tab in page.data %}
+    {% for item in tab.items %}
+    <div class="uk-panel" data-uk-filter="{{ tab.title }}"> 
+        <img 
+            src="{{ item }}">
+    </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+
+<script>
+$('#tab').children().first().addClass('uk-active');
+var grid = UIkit.grid(
+    $('#view'), 
+    {
+        animation: false,
+        controls: '#tab',
+        filter: $('#tab').children().first().attr('data-uk-filter')
+    }
+);
+</script>

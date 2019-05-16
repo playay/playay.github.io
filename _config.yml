@@ -1,0 +1,22 @@
+title:  "陶笛日记"
+exclude:  ["README.md"]
+include:  [".well-known"]
+timezone:  "Asia/Shanghai"
+
+url: https://www.ocarina-diary.com
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+  blogs:
+    output: true
+    permalink: /:collection/:name:output_ext
+
+  series:
+    output: true
+    permalink: /:collection/:name:output_ext
+
+  notation:
+    output: true
+    permalink: /:collection/:name:output_ext

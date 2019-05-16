@@ -1,0 +1,295 @@
+<svg viewBox="0 -60 840 620" width="840" height="680" encoding="UTF-8" xmlns="http://www.w3.org/2000/svg">
+<text x="300" y="50" style="font-weight:bold;" font-size="36" font-family="auto"> C调陶笛的 C指法 </text>
+<text x="830" y="80" dy="-2.632" text-anchor="end" fill="#1b1b1b" font-size="16" font-family="auto">陶笛日记</text>
+<svg x="10" y="100">
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#000" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#000" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#000" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#000" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <circle fill="#000" cx="47" cy="140" r="1.5"></circle>
+    <text x="40" y="135" style="font-size: 24px;">6</text>
+</svg>
+
+<svg x="150" y="100" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#000" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#000" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#000" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <circle fill="#000" cx="47" cy="140" r="1.5"></circle>
+    <text x="41" y="135" style="font-size: 24px;">7</text>
+</svg>
+
+
+<svg x="10" y="260" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#000" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#000" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <text x="40" y="135" style="font-size: 24px;">1</text>
+</svg>
+
+<svg x="150" y="260" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#000" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <text x="40" y="135" style="font-size: 24px;">2</text>
+</svg>
+
+<svg x="290" y="260" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <text x="40" y="135" style="font-size: 24px;">3</text>
+</svg>
+
+<svg x="430" y="260" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <text x="40" y="135" style="font-size: 24px;">4</text>
+</svg>
+
+<svg x="570" y="260" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <text x="40" y="135" style="font-size: 24px;">5</text>
+</svg>
+
+<svg x="10" y="420" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <text x="40" y="135" style="font-size: 24px;">6</text>
+</svg>
+
+<svg x="150" y="420" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <text x="40" y="135" style="font-size: 24px;">7</text>
+</svg>
+
+<svg x="290" y="420" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#000" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <circle fill="#000" cx="47" cy="110" r="1.5"></circle>
+    <text x="41" y="135" style="font-size: 24px;">1</text>
+</svg>
+
+<svg x="430" y="420" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <circle fill="#000" cx="47" cy="110" r="1.5"></circle>
+    <text x="40" y="135" style="font-size: 24px;">2</text>
+</svg>
+<svg x="570" y="420" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#000" cx="52" cy="34" r="4"></circle>
+
+    <circle fill="#000" cx="47" cy="110" r="1.5"></circle>
+    <text x="40" y="135" style="font-size: 24px;">3</text>
+</svg>
+<svg x="710" y="420" >
+    <path stroke="#000" fill="#eee" d="M45,98c-6,0,-6,0,-6,-20c-2,-4,-2,-4,-6,-6c-40,-10,-40,-34,25,-50c80,-20,80,-8,10,40c-8,6,-8,6,-12,20l-4,14c-1,2,-1,2,-8,2"></path>
+
+    <circle stroke="#000" fill="#fff" cx="32" cy="58" r="2"></circle>
+    <circle stroke="#000" fill="#fff" cx="79" cy="31" r="2"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="104" cy="24" r="3"></circle>
+    <circle stroke="#000" fill="#fff" cx="94" cy="32" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="84" cy="40" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="72" cy="48" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="40" cy="43" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="28" cy="48" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="16" cy="52" r="4"></circle>
+
+    <circle stroke="#000" fill="#fff" cx="28" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="68" cy="85" r="4"></circle>
+    <circle stroke="#000" fill="#fff" cx="52" cy="34" r="4"></circle>
+
+    <circle fill="#000" cx="47" cy="110" r="1.5"></circle>
+    <text x="39" y="135" style="font-size: 24px;">4</text>
+</svg>
+
+</svg>

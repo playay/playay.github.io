@@ -1,0 +1,39 @@
+{% if page.publish or page.url == '/' %}
+<!-- 链接提交 -->
+<!-- <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script> -->
+{% endif %}
+
+<!-- 百度统计 -->
+<!-- <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aca648cc481ba4a8e3a1b3bcfa33d4b0";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+    $('#the-gfw').on('passible', function() {
+        $.getScript('https://www.googletagmanager.com/gtag/js?id=UA-62897210-3')
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-62897210-3');
+    });
+</script>

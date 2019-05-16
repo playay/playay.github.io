@@ -1,0 +1,36 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录成功</title>
+</head>
+<body>
+    <p>登录成功，正在跳转回登录前页面。</p> 
+    <script>
+        function getParamInQueryParam(key) {
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            var r = window.top.location.search.substr(1).match(reg);
+            if (r != null) {
+                return decodeURIComponent(r[2])
+            }
+            return '';
+        }
+    </script>
+
+    <script>
+        let code = getParamInQueryParam('code')
+        let url = getParamInQueryParam('url')
+        if (code) {
+            location.replace('https://api.feling.io/login/withWeibo?code=' + code + '&url=' + url)
+        } else {
+            localStorage.userAvatar = getParamInQueryParam('userAvatar')
+            localStorage.accessToken = getParamInQueryParam('accessToken')
+            localStorage.accessTokenExpiredAt = getParamInQueryParam('accessTokenExpiredAt')
+
+            localStorage.userName = getParamInQueryParam('userName')
+            window.close()
+            location.replace(url)
+        }
+    </script>
+</body>
+</html>
